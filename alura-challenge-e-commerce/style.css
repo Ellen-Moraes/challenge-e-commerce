@@ -1,0 +1,419 @@
+/*Variaveis*/
+
+:root {
+    --bg-color: #ebebeb;
+    --input-placeholder: #d4d4d4;
+    --input-bg: #efefef;
+    --texto-destaque: #FFFF;
+    --azul-destaque: #2a7ae4;
+    --bg-contato: #Eaf2fd;
+  }
+
+/*Normalize*/
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Releway', sans-serif;
+    background-image:url(./assets/fundo1.png);
+    backdrop-filter: url(filters.svg#filter) blur(17px) hue-rotate(380deg);   
+    scroll-behavior: smooth;
+    background-size: 3550px
+}
+
+
+
+
+/*Padrão de projeto*/
+textarea:focus, input:focus {
+    box-shadow:0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+input::placeholder, textarea::placeholder{
+    color: var(--input-placeholder);
+    padding: 2%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--azul-destaque);
+    font-weight: 800;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*Header Geral*/
+
+header{
+    padding: 32.5px 154px;
+    background-color: var(--texto-destaque);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+/*Divs do Header*/
+
+.logo-busca {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img{
+        height: 19.17px;
+        width: 30.02px;
+    }
+
+    .logo p{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+    .logo .logo-azul{
+        margin-left: 5%;
+        color: var(--azul-destaque);
+    }
+
+    .logo-busca input{
+        margin-left: 20%;
+        width: 155px;
+        height: 30px;
+        border-radius: 30px;
+        padding: 1% 10%;
+        border: solid 1px #0b54ff18;
+        background-color: #f8f7f7;
+        background-image: url("assets/lupa.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-position-x: 125px;
+        background-size: 15px;
+        box-shadow: 0px 5px 15px #6895ff15;
+        font-size: 10px;
+    }
+
+    .logo-busca input::placeholder{
+        color: #007191b9;
+    }
+
+    .login{
+        width: 100.920rem;
+        display: flex;
+        justify-content: end;
+    }
+
+    .login button{
+        width: 7rem;
+        height: 6vh;
+        background-color: #f8f7f7;
+        border: solid 1px #0b54ff18;
+        box-shadow: 0px 7px 15px #6895ff15;
+        color: #007191b9;
+        text-transform: uppercase;
+        margin: 0px 15px;
+        border-radius: 8px;
+        text-shadow: 0px 2px 16px #6895ff70;
+        font-size: 10px;
+        
+    }
+
+    .login button:hover{
+        background-color: #3639ffa8;
+        color: var(--texto-destaque);
+        text-shadow: 0px 2px 12px #00030a8c;
+    }
+
+    .logo-carrinho{
+        width: 25px;
+        height: 25px;
+        
+        opacity: 80%;
+        cursor: pointer;
+    }
+
+/*Banner Promocional*/
+
+.destaque{
+    height: 352px;
+    background-image: url(./assets/Banner2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px 17px #5799ef96, 1px -1px 6px #5799ef7b;
+    padding: 0 0 100px 0;
+    margin: 0px 0px 140px 0px;
+}
+
+
+    .banner{
+        width: 751px;
+        height: 320px;
+        padding-left: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .banner button{
+        background-color: transparent;
+        color: var(--texto-destaque);
+        width: 100px;
+        display: flex;
+        left: 165px;
+        position: absolute;
+        top: 480px;
+        border: transparent;
+        padding: 23px;
+        cursor: pointer;
+                
+    }
+
+    .banner button:hover{
+        box-shadow: 3px 3px 6px #5757579e, -3px -3px 6px #5757579e;
+    }
+    
+/*Sessão de produtos*/
+
+.geral-prods{
+    display: flex;
+    flex-direction: column;
+    width: 1136px;
+    margin: 13rem auto;
+    
+}
+
+/*Divs na Sessão Produtos*/
+    .sessao-produtos{
+        display: flex;
+        margin-top: 3rem;
+        padding-bottom: 8rem;
+        
+    }
+    
+    .produto{
+        display: table-row;
+        transition: 1s all;
+        cursor: pointer;
+        background-color: #ebebeb;
+        box-shadow: -4px 4px 9px #dcdcdc, -4px 4px 6px #e9f2ff;
+        transform-style: preserve-3d;
+    }
+
+    .produto:hover {
+        transform: scale(1.1);
+        box-shadow: 3px 3px 6px #5757579e, -3px -3px 6px #5757579e;
+        border: 15px solid #ebebeb;
+    }
+
+    .btn-carrinho{
+        background: transparent;
+        border: transparent;
+        color: #0b54ff00;
+    }
+
+     .btn-carrinho::after {
+        position: absolute;
+        content: "";
+        inset: 0;
+        z-index: 0;
+        display: block;
+        transform-origin: center bottom;
+        box-sizing: border-box;
+    }       
+
+    .btn-carrinho:hover {
+        transition: 0.4s;
+        transform-origin: center bottom;
+        user-select: none;
+        font-size: 12px;
+        width: 156px;
+        height: 30px;
+        color: #fffafa;
+        background-color: #129206aa;
+        border-radius: 7px;
+        text-align: center;
+        margin: 7px 7px 7px 10px;  
+        border: solid 1px #1d1d1d3a;
+        letter-spacing: 1px;
+    }
+
+    .descricao{
+        padding: 1px 1px 10px 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 100;
+        margin: 20px 15px;
+        color: #00253bda;
+    }
+
+    .preco{
+        margin: 5px 45px;
+        padding: 1px 1px 10px 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #00253bda;
+    }
+
+    .ver{
+        padding: 7px 1px 7px 20px;
+        display: flex;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #00101a92;
+        text-transform: uppercase;
+        margin: 10px 15px;
+        text-shadow: -2px 4px 8px #4b4b4b66;
+    }
+    
+
+    .prod-titulo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .prod-titulo .titulo{
+        font-size: 32px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .mostrar-mais{
+        font-weight: bold;
+        margin-top: 25px;
+    }
+
+    .sessao-produtos{
+        height: 306px;
+        width: 1136px;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 64px;
+    }
+
+/*Form Contato*/
+
+.contato{
+    background-color:#1d1d1d;
+    color: #fdfdfd;
+    display: flex;
+    height: 365px;
+    justify-content: center;
+    padding: 64px 0;
+    margin: 200px 0px 0px 0px;
+}
+
+    .referencia{
+        display: flex;
+        width: 400px;
+        margin: 330px 0 0 0;
+    }
+
+    .referencia img{
+        width: 60px;
+        height: 40px;
+    }
+
+    .referencia p{
+        font-size: 26px;
+        font-weight: bolder;
+        color: var(--azul-destaque);
+        margin-top: 5px;
+        margin-left: 6px;
+    }
+
+    .links-uteis{
+        line-height: 40px;
+        width: 200px;
+        margin-right: 100px;
+    }
+
+    .links-uteis a{
+        color: #fdfdfd;
+        font-weight: normal;
+        display: flex;
+        justify-content: space-between;
+        margin: 18px;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 500px;
+        
+    }
+
+    .form p{
+        font-weight: bolder;
+    }
+
+    .form input{
+        width: 475px;
+        position: relative;
+        height: 56px;
+        border: transparent;
+        margin-bottom: 20px;
+        box-sizing: content-box;
+        padding: 0.5% 2.7%;
+        color: var(--azul-destaque);
+        box-shadow: 1px 1px 8px #0b55ff;
+        border-radius: 15px;
+    }
+
+    .form input:hover{
+        border-bottom: solid 2px var(--azul-destaque);
+        transition: linear 1s;
+    }
+
+    .label-nome{
+    width: 100%;
+    position: absolute;
+    color: var(--input-placeholder);
+    top: 80px; left: 9px;
+    transition: 0.5s;   
+    }
+
+    .input-nome:focus + .label-nome{
+    top: 64px;
+    font-size: 14px;
+    z-index: 2;
+    transition: 0.2s; 
+    color: var(--azul-destaque); 
+    }
+
+    .form textarea{
+        width: 100%;
+        font-family: 'Relaway', sans-serif;
+        border: transparent;
+        color: var(--azul-destaque);
+        margin-bottom: 20px;
+        box-shadow: 1px 1px 8px #0b55ff;
+        border-radius: 15px;
+    }
+
+    .form button{
+        background-color: var(--azul-destaque);
+        border: none;
+        color: var(--texto-destaque);
+        height: 51px;
+        width: 180px;
+        margin: 40px;
+        border-radius: 40px;
+        box-shadow: 1px 1px 8px #0b55ff;
+    }
+
